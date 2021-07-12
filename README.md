@@ -24,3 +24,31 @@ Create a project in django rest framework and celery with following APIs exposed
 * ***Items:*** To store info of each Items
 
 * ***Account:*** To store bank account info
+
+## ***REST APIs:-***
+* ***auth/registration/:*** To register a user
+
+* ***auth/login:*** To login a user
+
+* ***auth/logout:*** To logout already logged-in user
+
+* ***api/linktoken:*** To get link_token for logged-in user
+
+* ***api/tokenexchange:*** exchange public_token to get access_token
+
+* ***api/fetchtrasaction:*** Fetch transaction of loggedIn user
+
+* ***api/webhook:*** Exposed webhook api for handling plaid transactions
+
+* ***api/:***  Link account and go in to plaid auth flow
+
+## ***How to use:-***
+***step 1)*** Create a config.py file in plaid_auth directory and create a Setting object having plaid credentials as its properties
+
+***step 2)*** Install all the required dependecies from requirements.txt
+
+***step 3)*** Run the program and goto signup/login api to create/login your account
+
+***step 4)*** Go to api/ url to start the plaid auth flow for getting access token for one item
+
+***step 5)*** Goto fetchtransaction/url to fetch all the transactions between a start time and time
